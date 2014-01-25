@@ -1,0 +1,1 @@
+Place for docker file that will configure new cloud9 for each user-session
