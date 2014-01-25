@@ -1,9 +1,9 @@
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "docker"
+  config.vm.box = "openroad"
 
   config.vm.box_url  = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.10_chef-provisionerless.box"
-  config.vm.hostname = "open-road"
+  config.vm.hostname = "openroad"
 
   config.berkshelf.enabled = true
   config.cache.auto_detect = true
@@ -24,7 +24,9 @@ Vagrant.configure("2") do |config|
     chef.run_list = [
       "apt",
       "git",
-      "docker"
+      "docker",
+      "nvm",
+      "cloud9"
     ]
   end
 end
